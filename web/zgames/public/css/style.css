@@ -1,0 +1,9 @@
+.logo{
+    /*
+    Siempre que quieres que una imagen sea responsiva, defines solo una dimension de las dos
+    o defines el ancho, o defines el alto
+    Si defines el ancho, el alto es automatico, si defines el alto el ancho debe ser auto
+    */
+    height: 70px;
+    width: auto;
+}
