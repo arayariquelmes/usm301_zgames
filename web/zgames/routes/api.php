@@ -11,3 +11,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //La ruta puede ser post o get (post para enviar cosas a la bd, get para obtener)
 Route::get("marcas/get", [ConsolasController::class, "getMarcas"]);
 //Route::get("endpoint", [controlador::class,"metodo"])
+
+Route::get("consolas/get", [ConsolasController::class, "getConsolas"]);
+
+//TODO: Esto tiene que cambiar, esta entero feo
+Route::get("consolas/post", [ConsolasController::class,"crearConsola"]);
