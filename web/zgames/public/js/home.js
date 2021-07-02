@@ -12,7 +12,12 @@ const cargarMarcas = async()=>{
     });
     
 };
-cargarMarcas();
+//Esto ejecuta un codigo asegurandose que el total de la pagina
+//incluidos todos sus recursos este cargado antes de ejecutar
+document.addEventListener("DOMContentLoaded", ()=>{
+    cargarMarcas();
+});
+
 document.querySelector("#registrar-btn").addEventListener("click", async ()=>{
     let nombre = document.querySelector("#nombre-txt").value;
     let marca = document.querySelector("#marca-select").value;
@@ -28,5 +33,11 @@ document.querySelector("#registrar-btn").addEventListener("click", async ()=>{
     //3. El modelo ingresa en la base de datos
     //4. Todos felices
     let res = await crearConsola(consola); 
-    Swal.fire("Consola Creada", "Consola creada exitosamente", "info");
+    await Swal.fire("Consola Creada", "Consola creada exitosamente", "info");
+    //La linea que viene despues del Swal.fire se va a ejecutar solo cuando la persona aprete el OK
+    //Aqui a redirigir a otra página
+    
+    window.location.href = "ver_consolas";
+    //abrir nueva pestaña
+    //window.open("www.google.cl","_blank");
 });
