@@ -46,3 +46,8 @@
     php artisan make:model Nombre
 ``
 ## Importante siempre el nombre en SINGULAR
+
+## Tipos de datos y modificadores existentes
+``
+https://laravel.com/docs/8.x/migrations#available-column-types
+``
