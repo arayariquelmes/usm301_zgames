@@ -51,3 +51,14 @@
 ``
 https://laravel.com/docs/8.x/migrations#available-column-types
 ``
+
+## Pasos por cada entidad:
+1. Crear migracion
+2. Crear Modelo
+3. Crear Controller
+4. Agregar al controller las operaciones CRUD (INSERT, DELETE, BLA BLA)
+5. Agregar controller a las routes (api.php)
+6. Crear interfaz blade
+7. Crear archivo service
+8. Agregar al archivo service las llamadas al controller
+9. Agregar el codigo de un archivo js con el mismo nombre de la vista

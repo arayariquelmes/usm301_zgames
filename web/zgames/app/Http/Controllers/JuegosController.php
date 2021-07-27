@@ -13,7 +13,7 @@ class JuegosController extends Controller
     public function getJuegosByConsola(Request $request){
         $input = $request->all();
         $idConsola = $input["idConsola"];
-        $consola = Consola::find($idConsola);
+        $consola = Consola::findOrFail($idConsola);
         return $consola->juegos()->get(); // SELECT J.* FROM juegos J INNER JOIN consolas C ON J.consola_id=C.id WHERE C.id=1
     }
 
