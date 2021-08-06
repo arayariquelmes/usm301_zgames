@@ -18,7 +18,7 @@ Route::get("consolas/filtrar", [ConsolasController::class, "filtrarConsolas"]);
 Route::post("consolas/post", [ConsolasController::class,"crearConsola"]);
 Route::post("consolas/actualizar", [ConsolasController::class,"actualizarConsola"]);
 Route::post("consolas/delete", [ConsolasController::class,"eliminarConsola"]);
-
+Route::get("consolas/findById", [ConsolasController::class,"obtenerPorId"]);
 //Rutas del controlador de Juegos
 Route::get("juegos/get", [JuegosController::class, "getJuegos"]);
 Route::get("juegos/getByConsola", [JuegosController::class, "getJuegosByConsola"]);

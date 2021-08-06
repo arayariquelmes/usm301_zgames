@@ -10,6 +10,13 @@ const getConsolas = async (filtro ="todos")=>{
     }
     return resp.data;
 };
+
+//findById
+const findById = async (id)=>{
+    let resp = await axios.get(`api/consolas/findById?id=${id}`);
+    return resp.data;
+}
+
 //crearConsola
 
 const crearConsola = async (consola)=>{ //arrow functions
@@ -22,6 +29,20 @@ const crearConsola = async (consola)=>{ //arrow functions
     });
     return resp.data;
 };
+
+const actualizarConsola = async(consola)=>{
+    try{
+        let resp = await axios.post("api/consolas/actualizar", consola, {
+            headers:{
+                "Content-Type": "application/json"
+            }
+        });
+        return resp.data;
+    }catch(e){
+        return false;
+    }
+    
+}
 
 const eliminarConsola = async(id)=>{
     try{

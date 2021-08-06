@@ -31,6 +31,28 @@
             </table>
         </div>
     </div>
+    <div class="d-none">
+        <div class="row mt-5 molde-actualizar">
+                <div class="mb-3">
+                    <label for="nombre-txt" class="form-label">Nombre</label>
+                    <input type="text"  class="form-control nombre-txt">
+                </div>
+                <div class="mb-3">
+                    <label for="marca-select" class="form-label">Marca</label>
+                    <select class="form-select marca-select" >
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="anio-txt" class="form-label">Año de lanzamiento</label>
+                    <input type="number" class="form-control anio-txt">
+                </div>
+                
+                <div class="d-grid gap-1">
+                    <button  class="btn btn-info actualizar-btn">Actualizar</button>
+                </div>
+            </div>
+
+    </div>
 @endsection
 
 @section("javascript")

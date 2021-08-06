@@ -1,3 +1,4 @@
+
 const cargarConsolas = async()=>{
     let consolas = await getConsolas();
     let consolaSelect = document.querySelector("#consola-select");
